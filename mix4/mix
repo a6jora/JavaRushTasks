@@ -1,0 +1,26 @@
+public class mix{
+    int counter = 0;
+    public static void main(String[] args){
+        int count = 0;
+        mix[] m4a = new mix[20];
+        int x = 0;
+        while (x < 9){
+            m4a[x] = new mix();
+            m4a[x].counter++;
+            count++;
+            count = count + m4a[x].maybeNew(x);
+            x++;
+        }
+        System.out.print(count + " " + m4a[1].counter);
+    }
+
+    public int maybeNew(int index){
+        if (index <5)
+        {
+            mix m4 = new mix();
+            m4.counter++;
+            return 1;
+        }
+        return 0;
+    }
+}
